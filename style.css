@@ -11,7 +11,8 @@ html {
 }
 
 main {
-  background-color: #8c8c8c;
+  background-color: #d9d9d9;
+  box-shadow: 10px 10px 100px 5px rgba(0, 0, 0, 0.44);
 }
 
 footer {
@@ -31,13 +32,14 @@ a {
 
 .header {
   border-bottom: 1px solid #e2e8f0;
-  background-color: #d9d9d9;
+  background-color: #8c8c8c;
   background-image: url(images/logo_viridis.png);
   background-position: left;
   background-size: auto;
   background-repeat: no-repeat;
   height: 100px;
   min-width: 40px;
+  margin: 0;
 }
 
 .navbar {
