@@ -27,6 +27,7 @@ footer {
   text-align: center;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  align-items: baseline;
 }
 
 .footerBox1 {
@@ -37,6 +38,14 @@ footer {
 .footerBox2 {
   width: 1fr;
   padding: 10px;
+}
+
+.ikoner {
+}
+
+.ikoner img {
+  max-width: 50px;
+  max-height: 50px;
 }
 
 li {
@@ -50,20 +59,15 @@ a {
 .header {
   border-bottom: 1px solid #e2e8f0;
   background-color: #8c8c8c;
-  /* background-image: url(images/logo_viridis.png); */
-  /* background-position: left center;
-  background-size: auto;
-  background-repeat: no-repeat; */
   height: 100px;
   min-width: 40px;
-  margin: 0;
+  margin-top: 0;
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* padding: 1rem 1.5rem; */
 }
 
 .hamburger {
@@ -105,8 +109,8 @@ a {
 
 .nav-logo {
   justify-content: flex-start;
-  margin-left: 0px;
-  margin-top: 0px;
+  margin-left: 10px;
+  margin-top: 5px;
   height: 90px;
   width: 300px;
   background-image: url(images/logo.png);
