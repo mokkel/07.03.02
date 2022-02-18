@@ -17,9 +17,21 @@ main {
 
 footer {
   border-top: 1px solid #e2e8f0;
-  background-color: #d9d9d9;
   background-color: #d9aca3;
-  display: flex;
+  margin-bottom: 0;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.footerBox1 {
+  width: 1fr;
+  padding: 10px;
+}
+
+.footerBox2 {
+  width: 1fr;
+  padding: 10px;
 }
 
 li {
