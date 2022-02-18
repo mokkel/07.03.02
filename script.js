@@ -32,6 +32,7 @@ const url = "https://planter-5959.restdb.io/rest/_swagger.json";
 const key = "620f56fb34fd621565858796";
 let menu;
 let filter = "alle";
+/* her kan man tage fat i alle filterknapperne */
 const filtrerKnap = document.querySelectorAll("button");
 
 const options = {
@@ -40,15 +41,18 @@ const options = {
   },
 };
 
+/* Her lytter man til når hjemmesiden er loadet */
 document.addEventListener("DOMContentLoaded", start);
 
+/* når hjemmesiden er loadet, "aktivereres" funktionen "start"*/
+/* Herunder sørger man for, at man kan trykke på alle knapper og filtrerer */
 function start() {
   filtrerKnap.forEach((knap) =>
     knap.addEventListener("click", filtrerKategori)
   );
   hentdata();
 }
-
+/* her trykkes der på filterknapperne */
 function filtrerKategori() {
   filter = this.dataset.menu;
   console.log("filter", filter);
