@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Detaljer om planten</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <main>
@@ -28,8 +29,8 @@
       console.log({ id });
       let menu;
 
-      const url = `https://babushka-dd8a.restdb.io/rest/menu/${id}`;
-      const key = "600ec2fb1346a1524ff12de4";
+      const url = `https://planter-5959.restdb.io/rest/_swagger.json/${id}`;
+      const key = "620f56fb34fd621565858796";
       const options = {
         headers: {
           "x-apikey": key,
@@ -44,11 +45,13 @@
       }
 
       function vis() {
-        document.querySelector("h2").textContent = menu.navn;
-        document.querySelector("h3").textContent = menu.pris + ".kr";
-        document.querySelector("p").textContent = menu.langbeskrivelse;
-        /* document.querySelector("article:nth-child(2) p").textContent =
-          menu.langbeskrivelse; */
+        document.querySelector("h3").textContent = menu.navn;
+        document.querySelector("p").textContent = menu.oprindelse;
+        document.querySelector("p").textContent = menu.vandbehov;
+        document.querySelector("p").textContent = menu.lysforhold;
+        document.querySelector("p").textContent = menu.placering;
+        document.querySelector("p").textContent = menu.temperatur;
+        /* i tvivl om hvordan billeder skal stilles op */
         document.querySelector("img").src = `medium/${menu.billednavn}-md.jpg`;
       }
 
