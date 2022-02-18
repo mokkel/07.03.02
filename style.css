@@ -6,6 +6,15 @@
   box-sizing: border-box;
 }
 
+article {
+  border: solid #101010;
+}
+
+img {
+  max-width: 20%;
+  height: auto;
+}
+
 html {
   font-family: "Roboto", sans-serif;
 }
@@ -13,6 +22,19 @@ html {
 main {
   background-color: #d9d9d9;
   box-shadow: 10px 10px 100px 5px rgba(0, 0, 0, 0.44);
+  /* margin: 10px;
+  padding: 5px;
+  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); */
+}
+
+#temp {
+  margin: 10px;
+  padding: 5px;
+  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
 }
 
 img {
@@ -38,9 +60,6 @@ footer {
 .footerBox2 {
   width: 1fr;
   padding: 10px;
-}
-
-.ikoner {
 }
 
 .ikoner img {
