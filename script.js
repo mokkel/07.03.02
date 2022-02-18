@@ -78,9 +78,13 @@ function vis() {
     if (filter == ret.kategori || filter == "alle") {
       /*____klon er altså alt inde i template 'temp'_____*/
       const klon = temp.cloneNode(true).content;
-      klon.querySelector("h2").textContent = ret.navn;
-      klon.querySelector("h3").textContent = ret.pris + ".kr";
-      klon.querySelector("p").textContent = ret.kortbeskrivelse;
+      klon.querySelector("h3").textContent = ret.navn;
+      klon.querySelector("p").textContent = ret.oprindelse;
+      klon.querySelector("p").textContent = ret.vandbehov;
+      klon.querySelector("p").textContent = ret.lysforhold;
+      klon.querySelector("p").textContent = ret.placering;
+      klon.querySelector("p").textContent = ret.temperatur;
+      /* i tvivl med hvordan billederne skal sættes ind*/
       klon.querySelector("img").src = `medium/${ret.billednavn}-md.jpg`;
       /*___kald til at åbne i ny side_____*/
       klon.querySelector("article").addEventListener("click", () => {
@@ -92,10 +96,12 @@ function vis() {
   });
   function visDetaljer(kategori) {
     console.log(kategori);
-    modal.querySelector("h2").textContent = kategori.navn;
-    modal.querySelector("h3").textContent = kategori.pris;
-    modal.querySelector("p").textContent = kategori.kortbeskrivelse;
-    modal.querySelector("p").textContent = kategori.langbeskrivelse;
+    modal.querySelector("h3").textContent = kategori.navn;
+    modal.querySelector("p").textContent = kategori.oprindelse;
+    modal.querySelector("p").textContent = kategori.vandbehov;
+    modal.querySelector("p").textContent = kategori.lysforhold;
+    modal.querySelector("p").textContent = kategori.placering;
+    modal.querySelector("p").textContent = kategori.temperatur;
     modal.style.display = "block";
   }
 }
