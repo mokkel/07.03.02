@@ -7,8 +7,18 @@
 }
 
 html {
-  /* font-size: 62.5%; */
   font-family: "Roboto", sans-serif;
+}
+
+main {
+  background-color: #8c8c8c;
+}
+
+footer {
+  border-top: 1px solid #e2e8f0;
+  background-color: #d9d9d9;
+  background-color: #d9aca3;
+  display: flex;
 }
 
 li {
@@ -21,6 +31,13 @@ a {
 
 .header {
   border-bottom: 1px solid #e2e8f0;
+  background-color: #d9d9d9;
+  background-image: url(images/logo_viridis.png);
+  background-position: left;
+  background-size: auto;
+  background-repeat: no-repeat;
+  height: 100px;
+  min-width: 40px;
 }
 
 .navbar {
@@ -57,6 +74,7 @@ a {
 .nav-link {
   font-size: 1.6rem;
   font-weight: 400;
+  font-size: 90%;
   color: #475569;
 }
 
@@ -78,12 +96,12 @@ a {
 }
 
 .fpH1 {
-  color: green;
+  color: #405927;
   text-align: center;
 }
 
 .fpH2 {
-  color: green;
+  color: #6d8c3e;
   text-align: center;
   font-style: italic;
 }
