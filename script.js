@@ -1,5 +1,3 @@
-
-
 // NYT
 const url = "https://planter-5959.restdb.io/rest/planter";
 const key = "620f56fb34fd621565858796";
@@ -20,22 +18,22 @@ document.addEventListener("DOMContentLoaded", start);
 /* når hjemmesiden er loadet, "aktivereres" funktionen "start"*/
 /* Herunder sørger man for, at man kan trykke på alle knapper og filtrerer */
 function start() {
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
-const navLink = document.querySelectorAll(".nav-link");
+  const hamburger = document.querySelector(".hamburger");
+  const navMenu = document.querySelector(".nav-menu");
+  const navLink = document.querySelectorAll(".nav-link");
 
-hamburger.addEventListener("click", mobileMenu);
-navLink.forEach((n) => n.addEventListener("click", closeMenu));
+  hamburger.addEventListener("click", mobileMenu);
+  navLink.forEach((n) => n.addEventListener("click", closeMenu));
 
-function mobileMenu() {
-  hamburger.classList.toggle("active");
-  navMenu.classList.toggle("active");
-}
+  function mobileMenu() {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+  }
 
-function closeMenu() {
-  hamburger.classList.remove("active");
-  navMenu.classList.remove("active");
-}
+  function closeMenu() {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+  }
 
   filtrerKnap.forEach((knap) =>
     knap.addEventListener("click", filtrerKategori)
@@ -75,7 +73,6 @@ function visPlanter() {
       klon.querySelector(".temperatur").textContent = kategori.temperatur;
       /* i tvivl med hvordan billederne skal sættes ind*/
       klon.querySelector("img").src = "plante_billeder/" + kategori.billed;
-      /*___kald til at åbne i ny side_____*/
       klon.querySelector("article").addEventListener("click", () => {
         location.href = `single_view.html?id=${kategori._id}`;
       });
@@ -94,5 +91,4 @@ function visPlanter() {
     modal.style.display = "block";
   }
 }
-
 hentData();
