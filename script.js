@@ -16,21 +16,9 @@ function closeMenu() {
 }
 
 // NYT
-/*
-const url = "https://planter-5959.restdb.io/rest/_swagger.json";
+const url = "https://planter-5959.restdb.io/rest/planter";
 const key = "620f56fb34fd621565858796";
-
-const options = {
-  headers: {
-    "x-apikey": "620f56fb34fd621565858796",
-  },
-};
-
-*/
-
-const url = "https://planter-5959.restdb.io/rest/_swagger.json";
-const key = "620f56fb34fd621565858796";
-let menu;
+let planter;
 let filter = "alle";
 /* her kan man tage fat i alle filterknapperne */
 const filtrerKnap = document.querySelectorAll("button");
@@ -50,58 +38,59 @@ function start() {
   filtrerKnap.forEach((knap) =>
     knap.addEventListener("click", filtrerKategori)
   );
-  hentdata();
 }
 /* her trykkes der på filterknapperne */
 function filtrerKategori() {
-  filter = this.dataset.menu;
+  filter = this.dataset.planter;
   console.log("filter", filter);
   document.querySelector("h1").textContent = this.textContent;
 
-  vis();
+  visPlanter();
 }
 
-async function hentdata() {
+async function hentData() {
   console.log("her er json");
   const respons = await fetch(url, options);
-  menu = await respons.json();
-  vis();
+  planter = await respons.json();
+  visPlanter();
 }
 
 const container = document.querySelector("section");
 const temp = document.querySelector("template");
 
-function vis() {
-  console.log(menu);
+function visPlanter() {
+  console.log(planter);
   container.innerHTML = "";
-  menu.forEach((ret) => {
-    if (filter == ret.kategori || filter == "alle") {
+  planter.forEach((kategori) => {
+    if (filter == kategori.specifik || filter == "alle") {
       /*____klon er altså alt inde i template 'temp'_____*/
       const klon = temp.cloneNode(true).content;
-      klon.querySelector("h3").textContent = ret.navn;
-      klon.querySelector("p").textContent = ret.oprindelse;
-      klon.querySelector("p").textContent = ret.vandbehov;
-      klon.querySelector("p").textContent = ret.lysforhold;
-      klon.querySelector("p").textContent = ret.placering;
-      klon.querySelector("p").textContent = ret.temperatur;
+      klon.querySelector("h3").textContent = kategori.navn;
+      klon.querySelector(".oprindelse").textContent = kategori.oprindelse;
+      klon.querySelector(".vandbehov").textContent = kategori.vandbehov;
+      klon.querySelector(".lysforhold").textContent = kategori.lysforhold;
+      klon.querySelector(".placering").textContent = kategori.placering;
+      klon.querySelector(".temperatur").textContent = kategori.temperatur;
       /* i tvivl med hvordan billederne skal sættes ind*/
-      klon.querySelector("img").src = `medium/${ret.billednavn}-md.jpg`;
+      klon.querySelector("img").src = "plante_billeder/" + kategori.billed;
       /*___kald til at åbne i ny side_____*/
       klon.querySelector("article").addEventListener("click", () => {
-        location.href = `single_view.html?id=${ret._id}`;
+        location.href = `single_view.html?id=${kategori._id}`;
       });
 
       container.appendChild(klon);
     }
   });
-  function visDetaljer(kategori) {
-    console.log(kategori);
-    modal.querySelector("h3").textContent = kategori.navn;
-    modal.querySelector("p").textContent = kategori.oprindelse;
-    modal.querySelector("p").textContent = kategori.vandbehov;
-    modal.querySelector("p").textContent = kategori.lysforhold;
-    modal.querySelector("p").textContent = kategori.placering;
-    modal.querySelector("p").textContent = kategori.temperatur;
+  function visDetaljer(specifik) {
+    console.log(specifik);
+    modal.querySelector("h3").textContent = specifik.navn;
+    modal.querySelector("p").textContent = specifik.oprindelse;
+    modal.querySelector("p").textContent = specifik.vandbehov;
+    modal.querySelector("p").textContent = specifik.lysforhold;
+    modal.querySelector("p").textContent = specifik.placering;
+    modal.querySelector("p").textContent = specifik.temperatur;
     modal.style.display = "block";
   }
 }
+
+hentData();

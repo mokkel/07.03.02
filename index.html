@@ -44,7 +44,6 @@
         <!-- /* filtreringsknapper til de forskellige kategorier */ -->
         <nav>
           <button data-menu="alle" class="valgt">Planter</button>
-          <button data-menu="navn">Navn</button>
           <button data-menu="oprindelse">Oprindelse</button>
           <button data-menu="vandbehov">Vandbehov</button>
           <button data-menu="lysforhold">Lysforhold</button>
@@ -52,15 +51,15 @@
           <button data-menu="temperatur">Temperatur</button>
         </nav>
 
-        <section>
+        <section id="temp">
           <template>
             <article>
-              <h3></h3>
-              <p></p>
-              <p></p>
-              <p></p>
-              <p></p>
-              <p></p>
+              <h3 class="navn"></h3>
+              <p class="oprindelse"></p>
+              <p class="vandbehov"></p>
+              <p class="lysforhold"></p>
+              <p class="placering"></p>
+              <p class="temperatur"></p>
               <img src="" alt="" />
             </article>
           </template>
