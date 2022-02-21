@@ -55,7 +55,7 @@ async function hentData() {
   visPlanter();
 }
 
-const container = document.querySelector("section");
+const container = document.querySelector("#liste");
 const temp = document.querySelector("template");
 
 function visPlanter() {
