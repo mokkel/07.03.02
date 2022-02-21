@@ -38,29 +38,6 @@
       <section id="section1">
         <img class="fpSplashbillede" src="images/splash.png" alt="Splashbillede"/>
 
-        <!-- /* filtreringsknapper til de forskellige kategorier */ -->
-        <nav>
-          <button data-menu="alle" class="valgt">Planter</button>
-          <button data-menu="oprindelse">Oprindelse</button>
-          <button data-menu="vandbehov">Vandbehov</button>
-          <button data-menu="lysforhold">Lysforhold</button>
-          <button data-menu="placering">Placering af planten</button>
-        </nav>
-
-        <section id="liste">
-          <template>
-            <article>
-              <h3 class="navn"></h3>
-              <p class="oprindelse"></p>
-              <p class="vandbehov"></p>
-              <p class="lysforhold"></p>
-              <p class="placering"></p>
-              <p class="temperatur"></p>
-              <img src="" alt="" />
-            </article>
-          </template>
-        </section>
-
         <h1 class="fpH1">Viridis</h1>
         <h2 class="fpH2">en lærerig side om planter</h2>
         <p class="fpParagraph">
@@ -76,8 +53,34 @@
           sint accusamus iusto omnis beatae repudiandae voluptatum voluptates
           dolorem? Magni, commodi.
         </p>
+
+    
+
+        
         <hr class="divider" />
       </section>
+
+              <!-- /* filtreringsknapper til de forskellige kategorier */ -->
+              <nav class="navFiltrering">
+                <button data-menu="alle" class="valgt">Planter</button>
+                <button data-menu="oprindelse">Oprindelse</button>
+                <button data-menu="vandbehov">Vandbehov</button>
+                <button data-menu="lysforhold">Lysforhold</button>
+                <button data-menu="placering">Placering af planten</button>
+              </nav>
+      
+              <section id="liste">
+                <template>
+                  <article>
+                    <h3 class="navn"></h3>
+                    <p class="oprindelse"></p>
+                    <p class="vandbehov"></p>
+                    <p class="lysforhold"></p>
+                    <p class="placering"></p>
+                    <p class="temperatur"></p>
+                    <img src="" alt="" />
+                  </article>
+                </template>
 <!-- 
       <section id="section2">
         <article></article>
