@@ -1,4 +1,3 @@
-// NYT
 const url = "https://planter-5959.restdb.io/rest/planter";
 const key = "620f56fb34fd621565858796";
 /* herunder definerer vi en variabel som står for alle planter vi har */
