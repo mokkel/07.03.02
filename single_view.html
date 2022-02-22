@@ -34,10 +34,12 @@
       <button>Tilbage til forrige side</button>
       <section>
         <article>
-          <h2></h2>
-          <p></p>
-          <h3></h3>
-          <!-- <p></p> -->
+          <h3 class="navn"></h3>
+          <p class="oprindelse"></p>
+          <p class="vandbehov"></p>
+          <p class="lysforhold"></p>
+          <p class="placering"></p>
+          <p class="temperatur"></p>
           <img src="" alt="" />
         </article>
       </section>
@@ -65,9 +67,9 @@
       /*___går op i søger efter id__*/
       const id = urlParams.get("id");
       console.log({ id });
-      let menu;
+      let planter;
 
-      const url = `https://planter-5959.restdb.io/rest/_swagger.json/${id}`;
+      const url = `https://planter-5959.restdb.io/rest/planter/${id}`;
       const key = "620f56fb34fd621565858796";
       const options = {
         headers: {
@@ -77,20 +79,19 @@
 
       async function hentdata() {
         const respons = await fetch(url, options);
-        menu = await respons.json();
-        console.log("menu", menu);
+        planter = await respons.json();
+        console.log("planter", planter);
         vis();
       }
-
-      function vis() {
-        document.querySelector("h3").textContent = menu.navn;
-        document.querySelector("p").textContent = menu.oprindelse;
-        document.querySelector("p").textContent = menu.vandbehov;
-        document.querySelector("p").textContent = menu.lysforhold;
-        document.querySelector("p").textContent = menu.placering;
-        document.querySelector("p").textContent = menu.temperatur;
-        /* i tvivl om hvordan billeder skal stilles op */
-        document.querySelector("img").src = `medium/${menu.billednavn}-md.jpg`;
+      /* her ligger alle de informationer vi gerne vil have på single view siden omkring planten */
+      function vis(plante) {
+        document.querySelector("h3").textContent = planter.navn;
+        document.querySelector(".oprindelse").textContent = planter.oprindelse;
+        document.querySelector(".vandbehov").textContent = planter.vandbehov;
+        document.querySelector(".lysforhold").textContent = planter.lysforhold;
+        document.querySelector(".placering").textContent = planter.placering;
+        document.querySelector(".temperatur").textContent = planter.temperatur;
+        document.querySelector("img").src = "plante_billeder/" + planter.billed;
       }
 
       hentdata();
