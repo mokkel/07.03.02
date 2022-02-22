@@ -35,7 +35,9 @@ footer {
   margin-bottom: 0;
   text-align: center;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  min-height: 125px;
+  align-content: center;
   align-items: baseline;
 }
 
@@ -167,7 +169,6 @@ a {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
 }
-
 
 @media only screen and (max-width: 768px) {
   .nav-menu {
