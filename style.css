@@ -131,8 +131,8 @@ a {
 .fpSplashbillede {
   width: 100%;
   display: block;
-  /* height: 80vh;
-  padding: 10px 0 10px 0; */
+  max-height: 80vh;
+  padding: 10px 0 10px 0;
 }
 
 .fpH1 {
