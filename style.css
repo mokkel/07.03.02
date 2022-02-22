@@ -63,8 +63,7 @@ a {
 }
 
 .header {
-  border-bottom: 1px solid #e2e8f0;
-  background-color: #8c8c8c;
+  background-color: #fffdfd;
   height: 100px;
   min-width: 40px;
   margin-top: 0;
@@ -73,7 +72,9 @@ a {
 .navbar {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
+  font-family: Mostra Nuova;
+  font-size: 2rem;
 }
 
 .hamburger {

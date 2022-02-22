@@ -7,6 +7,62 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/x-icon" href="images/favicon.png" />
     <title>Om os</title>
+    <style>
+      img {
+        width: 100%;
+      }
+
+      main {
+        margin: 5px;
+      }
+      /* mediaquery til mobileversion */
+      @media (min-width: 600px) {
+        /* section1 */
+        #section1 {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+
+          gap: 80px;
+          padding: 10px;
+        }
+
+        #section1_text {
+          justify-content: center;
+        }
+        /* section2 */
+        #section2 {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-template-rows: 1fr;
+        }
+
+        #section2_text {
+          grid-template-columns: 1/3;
+          justify-content: center;
+        }
+      }
+
+      blockquote {
+        font-size: 3rem;
+        font-family: Mostra Nuova;
+        color: #405927;
+        display: grid;
+        place-content: center;
+        padding-top: 30px;
+        padding-bottom: 40px;
+      }
+
+      /* section3 */
+      .galleri {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 40px;
+        place-content: center;
+      }
+
+      /* section4 */
+    </style>
   </head>
   <body>
     <header class="header">
@@ -30,11 +86,69 @@
         </div>
       </nav>
     </header>
-    <main></main>
+    <main>
+      <!-- section1 med h2 og p og billede  -->
+      <section id="section1">
+        <div class="splash">
+          <img src="images/placeholder.png" alt="img1" />
+        </div>
+
+        <div id="section1_text">
+          <h2>V i r i d i s</h2>
+          <p>
+            Hos Viridis er vi 4 planteglade mennesker, som har stor passion for
+            stueplanter. Vi vil gerne kunne dele vores passion med andre
+            ligesindede, der brænder lige så meget for stueplanter som vi selv
+            gør. Det fantastiske ved stueplanter er, at de giver et godt
+            indeklima og skaber en hyggelig stemning i alle hjem. Om os: Vi er
+            fire venner der stiftede vores egen instagram konto for at sprede
+            plante-kærlighed. Det gik hurtigt op for os, at der fandtes mange
+            plante entusiaster derude. Derfor besluttede vi os for at skabe en
+            hjemmeside, der både kunne informere andre om hvordan, de skal
+            vedlige deres plante samt også, sprede vores kærlighed for planter.
+          </p>
+        </div>
+      </section>
+      <!-- section1 lukker -->
+
+      <!-- section2 med citat  -->
+      <section class="section2">
+        <div id="wrapper">
+          <div id="#section2_text">
+            <blockquote>
+              Et grønt univers for ligesindede plante-elskere
+            </blockquote>
+          </div>
+        </div>
+      </section>
+      <!-- section2 lukker -->
+      <!-- section3 med galleri af os  -->
+      <section id="section3">
+        <div class="galleri">
+          <img src="images/placeholder.png" alt="img1" />
+          <img src="images/placeholder.png" alt="img1" />
+          <img src="images/placeholder.png" alt="img1" />
+          <img src="images/placeholder.png" alt="img1" />
+        </div>
+      </section>
+      <!-- section2 lukker -->
+
+      <!-- section4 med text  -->
+      <section id="section3">
+        <div class="section3_text">
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Reprehenderit sapiente nulla perferendis dignissimos, laborum optio
+            ipsam maiores perspiciatis quaerat commodi esse, impedit, sit velit
+            voluptates saepe? Enim sequi exercitationem quibusdam!
+          </p>
+        </div>
+      </section>
+    </main>
     <footer class="footer">
       <div class="footerBox1">
         <h4>Om Viridis</h4>
-        <p>Plante uvivers for ligesindet der ikke kan få stue planter nok</p>
+        <p>Et grønt univers for ligesindede plante-elskere</p>
       </div>
       <div class="footerBox2">
         <h4>Kontakt os</h4>
