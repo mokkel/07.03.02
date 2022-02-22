@@ -97,6 +97,7 @@ function visPlanter() {
     modal.querySelector("p").textContent = plante.lysforhold;
     modal.querySelector("p").textContent = plante.placering;
     modal.querySelector("p").textContent = plante.temperatur;
+    modal.querySelector("p").textContent = plante.toxic;
     modal.style.display = "block";
   }
 }
