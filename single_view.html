@@ -41,7 +41,9 @@
           <p class="placering"></p>
           <p class="temperatur"></p>
           <p class="toxic"></p>
-          <img src="" alt="" />
+          <img class="billed" src="" alt="" />
+          <img class="vand" src="" alt="" />
+          <img class="sol" src="" alt="" />
         </article>
       </section>
     </main>
@@ -93,7 +95,10 @@
         document.querySelector(".placering").textContent = planter.placering;
         document.querySelector(".temperatur").textContent = planter.temperatur;
         document.querySelector(".toxic").textContent = planter.toxic;
-        document.querySelector("img").src = "plante_billeder/" + planter.billed;
+        document.querySelector(".billed").src =
+          "plante_billeder/" + planter.billed;
+        document.querySelector(".vand").src = "icons/" + planter.vand;
+        document.querySelector(".sol").src = "icons/" + planter.sol;
       }
 
       hentdata();
