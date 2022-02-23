@@ -168,7 +168,6 @@ a {
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
 }
 
-
 @media only screen and (max-width: 768px) {
   .nav-menu {
     position: fixed;
