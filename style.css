@@ -6,10 +6,6 @@
   box-sizing: border-box;
 }
 
-article {
-  border: solid #101010;
-}
-
 img {
   max-width: 100%;
   height: auto;
@@ -110,6 +106,7 @@ a {
   font-weight: 400;
   color: #475569;
   padding: 0.5rem 1rem;
+  white-space: nowrap;
 }
 
 .nav-link:hover {
@@ -163,11 +160,70 @@ a {
 }
 
 #liste {
-  margin: 10px;
+  margin: 100px;
   padding: 5px;
   gap: 10px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  justify-items: center;
+}
+
+#liste img {
+  max-height: 75vh;
+}
+
+#section3 .galleri {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(150px, 1fr));
+  justify-items: center;
+  grid-gap: 10px;
+  margin-bottom: 50px;
+}
+
+#section3 .galleri img {
+  max-height: 80vh;
+  max-width: 60vh;
+  border-radius: 2%;
+}
+
+#section3 p {
+  text-align: center;
+}
+
+#liste .article {
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+#singleviewArticles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
+  margin: 20px;
+  justify-items: center;
+  padding-bottom: 100px;
+}
+
+#singleviewArticles :nth-child(1) {
+  display: grid;
+  grid-auto-rows: auto;
+}
+
+.sol {
+  height: 100px;
+  padding-top: 10px;
+}
+
+.vand {
+  height: 100px;
+  padding-top: 10px;
+}
+
+.billed {
+  height: 70vh;
+}
+
+#singleviewArticles img {
+  max-height: 80vh;
 }
 
 @media only screen and (max-width: 768px) {
@@ -209,5 +265,36 @@ a {
   .hamburger.active .bar:nth-child(3) {
     -webkit-transform: translateY(-8px) rotate(-45deg);
     transform: translateY(-8px) rotate(-45deg);
+  }
+
+  #liste {
+    margin: 20px;
+    padding: 5px;
+    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    justify-items: center;
+    align-items: center;
+  }
+
+  #singleviewArticles {
+    display: grid;
+    margin: 30px;
+    justify-items: center;
+    text-align: start;
+    grid-template-columns: repeat(1, minmax(100px, 1fr));
+    line-height: 1.5em;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #liste {
+    margin: 20px;
+    padding: 5px;
+    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+    justify-items: center;
+    align-items: center;
   }
 }
