@@ -18,6 +18,7 @@ html {
 main {
   background-color: #d9d9d9;
   box-shadow: 10px 10px 100px 5px rgba(0, 0, 0, 0.44);
+  line-height: 1.5em;
 }
 
 img {
@@ -164,8 +165,9 @@ a {
   padding: 5px;
   gap: 10px;
   display: grid;
-  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   justify-items: center;
+  align-items: center;
 }
 
 #liste img {
@@ -174,7 +176,7 @@ a {
 
 #section3 .galleri {
   display: grid;
-  grid-template-columns: repeat(4, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   justify-items: center;
   grid-gap: 10px;
   margin-bottom: 50px;
@@ -205,7 +207,7 @@ a {
 
 #singleviewArticles :nth-child(1) {
   display: grid;
-  grid-auto-rows: auto;
+  grid-auto-rows: 10fr;
 }
 
 .sol {
@@ -267,16 +269,6 @@ a {
     transform: translateY(-8px) rotate(-45deg);
   }
 
-  #liste {
-    margin: 20px;
-    padding: 5px;
-    gap: 10px;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(200px, 1fr));
-    justify-items: center;
-    align-items: center;
-  }
-
   #singleviewArticles {
     display: grid;
     margin: 30px;
@@ -286,15 +278,4 @@ a {
     line-height: 1.5em;
   }
 }
-
-@media only screen and (max-width: 500px) {
-  #liste {
-    margin: 20px;
-    padding: 5px;
-    gap: 10px;
-    display: grid;
-    grid-template-columns: repeat(1, minmax(200px, 1fr));
-    justify-items: center;
-    align-items: center;
-  }
 }
