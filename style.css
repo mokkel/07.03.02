@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+.navn {
+  margin-top: 10px;
+  margin-top: 20px;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -16,9 +21,15 @@ html {
 }
 
 main {
+  /*
   background-color: #d9d9d9;
-  box-shadow: 10px 10px 100px 5px rgba(0, 0, 0, 0.44);
+  box-shadow: 10px 10px 100px 5px rgba(0, 0, 0, 0.44); */
   line-height: 1.5em;
+}
+
+.h1_planter {
+  margin-left: 40px;
+  margin-bottom: 35px;
 }
 
 img {
@@ -36,6 +47,7 @@ footer {
   min-height: 125px;
   align-content: center;
   align-items: baseline;
+  margin-top: 60px;
 }
 
 .footerBox1 {
@@ -157,17 +169,35 @@ a {
 }
 
 .navFiltrering {
+  display: flex;
+  place-content: center;
   margin: 40px;
+  gap: 60px;
+  margin-top: 60px;
+}
+
+button {
+  border-radius: 17px;
+  height: 40px;
+  width: 80px;
+  background-color: #d9aca3;
+  border: none;
+  color: #405927;
+  margin-left: 111px;
+  margin-top: 25px;
+  margin-bottom: 50px;
 }
 
 #liste {
-  margin: 100px;
+  /*margin: 100px; */
   padding: 5px;
-  gap: 10px;
+  gap: 25px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   justify-items: center;
   align-items: center;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
 #liste img {
@@ -211,12 +241,12 @@ a {
 }
 
 .sol {
-  height: 100px;
+  height: 60px;
   padding-top: 10px;
 }
 
 .vand {
-  height: 100px;
+  height: 60px;
   padding-top: 10px;
 }
 
@@ -253,6 +283,7 @@ a {
   .hamburger {
     display: block;
     cursor: pointer;
+    margin-right: 29px;
   }
 
   .hamburger.active .bar:nth-child(2) {
@@ -277,5 +308,20 @@ a {
     grid-template-columns: repeat(1, minmax(100px, 1fr));
     line-height: 1.5em;
   }
-}
+
+  .navFiltrering {
+    display: flex;
+    place-content: center;
+    margin: 40px;
+    gap: 30px;
+    margin-top: 60px;
+  }
+
+  button {
+    border-radius: 17px;
+    height: 40px;
+    width: 80px;
+    border-color: #d9aca3;
+    color: #405927;
+  }
 }
