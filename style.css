@@ -9,6 +9,10 @@
 .navn {
   margin-top: 10px;
   margin-top: 20px;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.8rem;
+  font-weight: regular;
+  text-align: center;
 }
 
 img {
@@ -84,7 +88,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  font-family: Mostra Nuova;
+  font-family: "Josefin Sans", sans-serif;
   font-size: 2rem;
 }
 
@@ -142,7 +146,6 @@ a {
   width: 100%;
   display: block;
   max-height: 80vh;
-  padding: 10px 0 10px 0;
 }
 
 .fpH1 {
@@ -178,14 +181,17 @@ a {
 
 button {
   border-radius: 17px;
-  height: 40px;
-  width: 80px;
+  height: 50px;
+  width: 100px;
   background-color: #d9aca3;
   border: none;
   color: #405927;
-  margin-left: 111px;
+  /* margin-left: 111px; */
   margin-top: 25px;
   margin-bottom: 50px;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.6rem;
+  cursor: pointer;
 }
 
 #liste {
@@ -202,6 +208,7 @@ button {
 
 #liste img {
   max-height: 75vh;
+  cursor: pointer;
 }
 
 #section3 .galleri {
@@ -311,17 +318,91 @@ button {
 
   .navFiltrering {
     display: flex;
-    place-content: center;
+    align-content: center;
+    justify-content: center;
     margin: 40px;
-    gap: 30px;
+    gap: 15px;
     margin-top: 60px;
+    flex-direction: row;
   }
 
   button {
     border-radius: 17px;
     height: 40px;
-    width: 80px;
+    width: 95px;
     border-color: #d9aca3;
     color: #405927;
+    font-family: "Josefin Sans", sans-serif;
+    padding: 10px;
   }
+}
+
+img {
+  width: 100%;
+}
+
+main {
+  margin: 5px;
+}
+
+#section1_text {
+  font-family: "Roboto Slab", sans-serif;
+  line-height: 2rem;
+}
+
+#section1_text h2 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2rem;
+}
+
+#section1_om {
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+
+/* OM OS  */
+/* mediaquery til mobileversion */
+@media (min-width: 600px) {
+  /* section1 */
+  #section1_om {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+    padding: 10px;
+  }
+
+  #section1_text {
+    justify-content: center;
+  }
+  /* section2 */
+  #section2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  #section2_text {
+    grid-template-columns: 1/3;
+    justify-content: center;
+  }
+}
+
+blockquote {
+  font-size: 3rem;
+  font-family: "Josefin Sans", sans-serif;
+  color: #405927;
+  display: grid;
+  place-content: center;
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+/* section3 */
+.galleri {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  place-content: center;
 }
