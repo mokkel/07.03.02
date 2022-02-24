@@ -31,7 +31,7 @@
       </nav>
     </header>
     <main>
-      <button>Tilbage til forrige side</button>
+      <button>Tilbage</button>
       <section>
         <article>
           <h3 class="navn"></h3>
@@ -40,7 +40,11 @@
           <p class="lysforhold"></p>
           <p class="placering"></p>
           <p class="temperatur"></p>
-          <img src="" alt="" />
+          <p class="toxic"></p>
+          <img class="billed" src="" alt="" />
+          <img class="vand" src="" alt="" />
+          <img class="sol" src="" alt="" />
+          <img class="giftighed" src="" alt="" />
         </article>
       </section>
     </main>
@@ -93,7 +97,12 @@
         document.querySelector(".lysforhold").textContent = planter.lysforhold;
         document.querySelector(".placering").textContent = planter.placering;
         document.querySelector(".temperatur").textContent = planter.temperatur;
-        document.querySelector("img").src = "plante_billeder/" + planter.billed;
+        document.querySelector(".toxic").textContent = planter.toxic;
+        document.querySelector(".billed").src =
+          "plante_billeder/" + planter.billed;
+        document.querySelector(".vand").src = "icons/" + planter.vand;
+        document.querySelector(".sol").src = "icons/" + planter.sol;
+        document.querySelector(".giftighed").src = "icons/" + planter.giftighed;
       }
 
       hentdata();

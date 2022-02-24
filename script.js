@@ -1,4 +1,3 @@
-// NYT
 const url = "https://planter-5959.restdb.io/rest/planter";
 const key = "620f56fb34fd621565858796";
 /* herunder definerer vi en variabel som står for alle planter vi har */
@@ -72,13 +71,17 @@ function visPlanter() {
     if (filter == plante.size || filter == "alle") {
       /*____klon er altså alt inde i template 'temp'_____*/
       const klon = temp.cloneNode(true).content;
+      klon.querySelector("img").src = "plante_billeder/" + plante.billed;
       klon.querySelector("h3").textContent = plante.navn;
+      /* nedenstående bruges ikke på plante siden da vi kun vil vise billedet af planterne samt deres navn 
       klon.querySelector(".oprindelse").textContent = plante.oprindelse;
       klon.querySelector(".vandbehov").textContent = plante.vandbehov;
       klon.querySelector(".lysforhold").textContent = plante.lysforhold;
       klon.querySelector(".placering").textContent = plante.placering;
       klon.querySelector(".temperatur").textContent = plante.temperatur;
-      klon.querySelector("img").src = "plante_billeder/" + plante.billed;
+    
+      */
+
       /* her fortæller vi, at når der klikkes på artiklen (det element der indeholder billedet og teksten) føres man videre til en ny side*/
       klon.querySelector("article").addEventListener("click", () => {
         location.href = `single_view.html?id=${plante._id}`;
@@ -97,6 +100,7 @@ function visPlanter() {
     modal.querySelector("p").textContent = plante.lysforhold;
     modal.querySelector("p").textContent = plante.placering;
     modal.querySelector("p").textContent = plante.temperatur;
+    modal.querySelector("p").textContent = plante.toxic;
     modal.style.display = "block";
   }
 }
