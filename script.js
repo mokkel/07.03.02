@@ -2,7 +2,8 @@ const url = "https://planter-5959.restdb.io/rest/planter";
 const key = "620f56fb34fd621565858796";
 /* herunder definerer vi en variabel som står for alle planter vi har */
 let planter;
-/* Her har vi et filter som kan filtrere på alle planter - så man tager udgangspunkt i alle planter og filtrerer derudfra*/
+/* Her har vi et filter som kan filtrere på alle planter
+ - så man tager udgangspunkt i alle planter og filtrerer derudfra*/
 let filter = "alle";
 /* her tager man fat i alle filtersknapperne */
 const filtrerKnap = document.querySelectorAll("button");
@@ -35,14 +36,19 @@ function start() {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
   }
-  /* vi skaber en filter knap: vi løber alle knapper igennem for at lytte efter, hvilken knap der er blevet trykket på og filtrerer */
+  /* vi skaber en filter knap: vi løber alle knapper igennem for at lytte efter,
+   hvilken knap der er blevet trykket på og filtrerer */
   filtrerKnap.forEach((knap) =>
     knap.addEventListener("click", filtrerKategori)
   );
 }
-/* her trykkes der på filterknapperne: her ændrer vi på filter værdien således at det ikke er "alle" man tager fat i, men at this i datasetet iblandt alle planter bliver til den knap/kategori af planter man har trykket på. Filtereret bliver derfor til det, man har trykket på */
+/* her trykkes der på filterknapperne: her ændrer vi på filter værdien
+ således at det ikke er "alle" man tager fat i, men at this i datasetet
+  iblandt alle planter bliver til den knap/kategori af planter man har trykket på.
+   Filtereret bliver derfor til det, man har trykket på */
 function filtrerKategori() {
-  /* this bliver således den specifikke knappe vi har trykket på og henter derfra datasettet (data-planter fra planter.html) fra den kateorgi af planter */
+  /* this bliver således den specifikke knappe vi har trykket på og henter derfra datasettet
+   (data-planter fra planter.html) fra den kateorgi af planter */
   filter = this.dataset.planter;
   console.log("filter", filter);
   /* h1 ændrer sig efter det filter (den katerogi af planter) vi har valgt trykket på*/
@@ -67,7 +73,9 @@ function visPlanter() {
   container.innerHTML = "";
   /* her tager man fat i alle planter og løber igennem hvert enkel plante */
   planter.forEach((plante) => {
-    /* filteret her er ikke længere "alle", men den katerogi af planter, vi har trykket på og derfor filtreres der i planterne og der vises kun dem, der passer til den kategori, man har trykket på*/
+    /* filteret her er ikke længere "alle", men den katerogi af planter,
+     vi har trykket på og derfor filtreres der i planterne og der vises kun dem,
+      der passer til den kategori, man har trykket på*/
     if (filter == plante.size || filter == "alle") {
       /*____klon er altså alt inde i template 'temp'_____*/
       const klon = temp.cloneNode(true).content;
@@ -82,7 +90,8 @@ function visPlanter() {
     
       */
 
-      /* her fortæller vi, at når der klikkes på artiklen (det element der indeholder billedet og teksten) føres man videre til en ny side*/
+      /* her fortæller vi, at når der klikkes på artiklen
+       (det element der indeholder billedet og teksten) føres man videre til en ny side*/
       klon.querySelector("article").addEventListener("click", () => {
         location.href = `single_view.html?id=${plante._id}`;
       });
